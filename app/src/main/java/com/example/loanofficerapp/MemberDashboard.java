@@ -37,21 +37,26 @@ SharedPreferences sharedPreferences;
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 int itemId = menuItem.getItemId();
                 if (itemId == R.id.Loan1) {
-                    Intent intent = new Intent(MemberDashboard.this,MemberRequest.class);
+                    Intent intent = new Intent(MemberDashboard.this,HomeActivity.class);
                     intent.putExtra("loanOfficerid",""+sharedPreferences.getString("loanOfficerid",""));
                     intent.putExtra("token",""+sharedPreferences.getString("token",""));
                     startActivity(intent);
                 } else if (itemId == R.id.Loan2) {
-                    Intent intent = new Intent(MemberDashboard.this,MemberList.class);
+                    Intent intent = new Intent(MemberDashboard.this,MemberRequest.class);
                     intent.putExtra("loanOfficerid",""+sharedPreferences.getString("loanOfficerid",""));
                     intent.putExtra("token",""+sharedPreferences.getString("token",""));
                     startActivity(intent);
                 } else if (itemId == R.id.Loan3) {
+                    Intent intent = new Intent(MemberDashboard.this,MemberList.class);
+                    intent.putExtra("loanOfficerid",""+sharedPreferences.getString("loanOfficerid",""));
+                    intent.putExtra("token",""+sharedPreferences.getString("token",""));
+                    startActivity(intent);
+                } else if (itemId == R.id.Loan4) {
                     Intent intent = new Intent(MemberDashboard.this,RepaymentList.class);
                     intent.putExtra("loanOfficerid",""+sharedPreferences.getString("loanOfficerid",""));
                     intent.putExtra("token",""+sharedPreferences.getString("token",""));
                     startActivity(intent);
-                }else if (itemId == R.id.Loan4) {
+                } else if (itemId == R.id.Loan5) {
                     Intent intent = new Intent(MemberDashboard.this,LoginActivity.class);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("loginStatus", "");

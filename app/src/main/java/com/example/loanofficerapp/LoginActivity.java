@@ -21,7 +21,7 @@ import retrofit2.Response;
 public class LoginActivity extends AppCompatActivity {
     ActivityLoginBinding binding;
     SharedPreferences sharedPreferences;
-    String loanOfficerid ="",password ="" ,token="";
+    String loanOfficerid ="", password ="" , token="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

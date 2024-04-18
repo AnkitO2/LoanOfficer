@@ -1,5 +1,7 @@
 package com.example.loanofficerapp.Retrofit;
+import com.example.loanofficerapp.Request.LoanOfficerHomeHomePageAndDashboardRequest;
 import com.example.loanofficerapp.Request.LoanOfficerLoginWithIDAndPasswordRequest;
+import com.example.loanofficerapp.Response.LoanOfficerHomeHomePageAndDashboardResponse;
 import com.example.loanofficerapp.Response.LoanOfficerLoginWithIDAndPasswordResponse;
 
 import retrofit2.Call;
@@ -11,4 +13,6 @@ public interface ApiServices {
 @POST("Service/LoanOfficerLoginWithIDAndPassword")
 Call<LoanOfficerLoginWithIDAndPasswordResponse>LoginIdAndPassword(@Body LoanOfficerLoginWithIDAndPasswordRequest loanOfficerLoginWithIDAndPasswordRequest);
 
+@POST("Service/LoanOfficerHomeHomePageAndDashboard")
+Call<LoanOfficerHomeHomePageAndDashboardResponse>Dashboard(@Body LoanOfficerHomeHomePageAndDashboardRequest loanOfficerHomeHomePageAndDashboardRequest);
 }

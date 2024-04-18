@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 <group android:checkableBehavior="single">
+
     <item android:id="@+id/Loan1"
         android:icon="@drawable/person_icon"
-        android:title="MemberRegistration"/>
+        android:title="Home Page"/>
 
     <item android:id="@+id/Loan2"
         android:icon="@drawable/person_icon"
-        android:title="MemberList"/>
+        android:title="Member Registration"/>
 
     <item android:id="@+id/Loan3"
         android:icon="@drawable/person_icon"
-        android:title="RePayment"/>
+        android:title="Member List"/>
 
     <item android:id="@+id/Loan4"
+        android:icon="@drawable/person_icon"
+        android:title="Re Payment"/>
+
+    <item android:id="@+id/Loan5"
         android:icon="@drawable/person_icon"
         android:title="Logout"/>
 </group>
