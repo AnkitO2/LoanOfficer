@@ -22,6 +22,7 @@ SharedPreferences sharedPreferences;
         super.onCreate(savedInstanceState);
         binding = MemberDashboardBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
         sharedPreferences =getSharedPreferences("MyPREFERENCES", Context.MODE_PRIVATE);
 
         binding.memberId.setText(sharedPreferences.getString("loanOfficerid",""));
