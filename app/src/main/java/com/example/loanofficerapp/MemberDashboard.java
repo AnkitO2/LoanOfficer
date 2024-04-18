@@ -25,8 +25,8 @@ SharedPreferences sharedPreferences;
 
         sharedPreferences =getSharedPreferences("MyPREFERENCES", Context.MODE_PRIVATE);
 
-        binding.memberId.setText(sharedPreferences.getString("loanOfficerid",""));
-        binding.tokenId.setText(sharedPreferences.getString("token",""));
+        //binding.memberId.setText(sharedPreferences.getString("loanOfficerid",""));
+        //binding.tokenId.setText(sharedPreferences.getString("token",""));
 
         binding.menuIcon.setOnClickListener(v -> {
             binding.drawerLayout1.openDrawer(GravityCompat.START);
@@ -57,11 +57,8 @@ SharedPreferences sharedPreferences;
                     editor.putString("loginStatus", "");
                     editor.apply();
                     startActivity(intent);
-                }
-                return true; // Return true to indicate that the item click is handled
+                }return true; // Return true to indicate that the item click is handled
             }
         });
     }
-
-
 }

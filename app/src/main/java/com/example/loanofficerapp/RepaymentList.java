@@ -27,6 +27,7 @@ private ListRepaymentBinding binding;
         binding.menuIcon.setOnClickListener(v -> {
             binding.drawerLayout1.openDrawer(GravityCompat.START);
         });
+
         binding.navigationView1.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
