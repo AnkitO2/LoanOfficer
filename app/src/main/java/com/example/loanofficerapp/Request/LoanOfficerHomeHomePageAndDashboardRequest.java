@@ -4,7 +4,6 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class LoanOfficerHomeHomePageAndDashboardRequest {
-
     @SerializedName("LoanOfficerid")
     @Expose
     private String loanOfficerid;
@@ -27,4 +26,5 @@ public class LoanOfficerHomeHomePageAndDashboardRequest {
     public void setTokenString(String tokenString) {
         this.tokenString = tokenString;
     }
+
 }

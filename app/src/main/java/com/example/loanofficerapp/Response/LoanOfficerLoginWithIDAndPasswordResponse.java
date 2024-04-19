@@ -4,7 +4,6 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class LoanOfficerLoginWithIDAndPasswordResponse {
-
     @SerializedName("LoanOfficerLoginWithIDAndPassword")
     @Expose
     private LoanOfficerLoginWithIDAndPassword loanOfficerLoginWithIDAndPassword;
@@ -18,7 +17,6 @@ public class LoanOfficerLoginWithIDAndPasswordResponse {
     @Expose
     private Boolean status;
 
-
     public LoanOfficerLoginWithIDAndPassword getLoanOfficerLoginWithIDAndPassword() {
         return loanOfficerLoginWithIDAndPassword;
     }
@@ -26,7 +24,6 @@ public class LoanOfficerLoginWithIDAndPasswordResponse {
     public void setLoanOfficerLoginWithIDAndPassword(LoanOfficerLoginWithIDAndPassword loanOfficerLoginWithIDAndPassword) {
         this.loanOfficerLoginWithIDAndPassword = loanOfficerLoginWithIDAndPassword;
     }
-
 
     public String getLoginMessage() {
         return loginMessage;
@@ -36,8 +33,6 @@ public class LoanOfficerLoginWithIDAndPasswordResponse {
         this.loginMessage = loginMessage;
     }
 
-
-
     public String getMessage() {
         return message;
     }
@@ -46,8 +41,6 @@ public class LoanOfficerLoginWithIDAndPasswordResponse {
         this.message = message;
     }
 
-
-
     public Boolean getStatus() {
         return status;
     }
@@ -55,6 +48,5 @@ public class LoanOfficerLoginWithIDAndPasswordResponse {
     public void setStatus(Boolean status) {
         this.status = status;
     }
-
 
 }

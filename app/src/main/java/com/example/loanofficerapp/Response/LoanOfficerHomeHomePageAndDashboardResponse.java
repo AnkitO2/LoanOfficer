@@ -14,7 +14,6 @@ public class LoanOfficerHomeHomePageAndDashboardResponse {
     @Expose
     private Boolean status;
 
-
     public LoanOfficerHomeHomePageAndDashboard getLoanOfficerHomeHomePageAndDashboard() {
         return loanOfficerHomeHomePageAndDashboard;
     }

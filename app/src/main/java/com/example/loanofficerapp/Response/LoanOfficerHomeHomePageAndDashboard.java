@@ -4,7 +4,6 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class LoanOfficerHomeHomePageAndDashboard {
-
     @SerializedName("AadharNo")
     @Expose
     private String aadharNo;
@@ -62,7 +61,6 @@ public class LoanOfficerHomeHomePageAndDashboard {
     @SerializedName("Religion")
     @Expose
     private String religion;
-
 
     public String getAadharNo() {
         return aadharNo;
@@ -215,5 +213,4 @@ public class LoanOfficerHomeHomePageAndDashboard {
     public void setReligion(String religion) {
         this.religion = religion;
     }
-
 }

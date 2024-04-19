@@ -4,7 +4,6 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class LoanOfficerLoginWithIDAndPasswordRequest {
-
     @SerializedName("LoanOfficerid")
     @Expose
     private String loanOfficerid;
@@ -19,6 +18,7 @@ public class LoanOfficerLoginWithIDAndPasswordRequest {
     public void setLoanOfficerid(String loanOfficerid) {
         this.loanOfficerid = loanOfficerid;
     }
+
     public String getPassword() {
         return password;
     }
@@ -26,4 +26,5 @@ public class LoanOfficerLoginWithIDAndPasswordRequest {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }

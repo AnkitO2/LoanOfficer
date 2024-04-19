@@ -12,7 +12,9 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+
 import com.example.loanofficerapp.Request.LoanOfficerHomeHomePageAndDashboardRequest;
+import com.example.loanofficerapp.Request.LoanOfficerLoginWithIDAndPasswordRequest;
 import com.example.loanofficerapp.Response.LoanOfficerHomeHomePageAndDashboardResponse;
 import com.example.loanofficerapp.Retrofit.RetrofitClient;
 import com.example.loanofficerapp.databinding.ActivityHomeBinding;
@@ -31,6 +33,7 @@ private ActivityHomeBinding binding;
         super.onCreate(savedInstanceState);
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         sharedPreferences =getSharedPreferences("MyPREFERENCES", Context.MODE_PRIVATE);
+
         homePage();
         setContentView(binding.getRoot());
 
@@ -75,6 +78,7 @@ private ActivityHomeBinding binding;
 
 void homePage(){
     LoanOfficerHomeHomePageAndDashboardRequest request =  new LoanOfficerHomeHomePageAndDashboardRequest();
+
     request.setLoanOfficerid(getIntent().getStringExtra("loanOfficerid"));
     request.setTokenString(getIntent().getStringExtra("token"));
 
@@ -102,7 +106,7 @@ void homePage(){
            binding.home16.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getMarital());
            binding.home17.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getMobileNo());
            binding.home18.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getQualification());
-           binding.home19.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getReligion());
+
         } else {
             Intent intent = new Intent(HomeActivity.this,LoginActivity.class);
             startActivity(intent);
