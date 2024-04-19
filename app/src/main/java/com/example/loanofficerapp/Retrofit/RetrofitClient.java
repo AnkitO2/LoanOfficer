@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
     public static ApiServices getClient(){
-        Retrofit retrofit=new Retrofit.Builder()
+        Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://nbfcmobile.allsoft.online/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();

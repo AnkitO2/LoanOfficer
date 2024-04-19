@@ -10,7 +10,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
-import android.widget.DatePicker;
 import android.widget.Toast;
 
 import com.example.loanofficerapp.Request.LoanOfficerHomeHomePageAndDashboardRequest;
@@ -26,17 +25,19 @@ import retrofit2.Response;
 public class HomeActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
 private ActivityHomeBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         sharedPreferences =getSharedPreferences("MyPREFERENCES", Context.MODE_PRIVATE);
         homePage();
-        setContentView(R.layout.activity_home);
+        setContentView(binding.getRoot());
 
         binding.menuIcon.setOnClickListener(v -> {
             binding.drawerLayout1.openDrawer(GravityCompat.START);
         });
+
         binding.navigationView1.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -67,15 +68,13 @@ private ActivityHomeBinding binding;
                     editor.putString("loginStatus", "");
                     editor.apply();
                     startActivity(intent);
-                }return true; // Return true to indicate that the item click is handled
+                }return true;
             }
         });
     }
 
-
 void homePage(){
     LoanOfficerHomeHomePageAndDashboardRequest request =  new LoanOfficerHomeHomePageAndDashboardRequest();
-
     request.setLoanOfficerid(getIntent().getStringExtra("loanOfficerid"));
     request.setTokenString(getIntent().getStringExtra("token"));
 
@@ -85,13 +84,29 @@ void homePage(){
         if (response.body().getMessage().equalsIgnoreCase("Successful")){
             Log.d("Response", "Body: " + response.body().toString());
            binding.homeData1.setText(response.body().getMessage());
-
-        }else
-        {
+           binding.home1.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getAadharNo());
+           binding.home2.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getContactNo());
+           binding.home3.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getDob());
+           binding.home4.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getDepartmentName());
+           binding.home5.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getDesignationName());
+           binding.home6.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getEmailId());
+           binding.home7.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getEmpJoinDate());
+           binding.home8.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getEmployeeId());
+           binding.home9.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getEmployeeName());
+           binding.home10.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getEmployeeNo());
+           binding.home11.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getEmployeeType());
+           binding.home12.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getFinYear());
+           binding.home13.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getGender());
+           binding.home14.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getGuardianName());
+           binding.home15.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getIdType());
+           binding.home16.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getMarital());
+           binding.home17.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getMobileNo());
+           binding.home18.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getQualification());
+           binding.home19.setText(response.body().getLoanOfficerHomeHomePageAndDashboard().getReligion());
+        } else {
             Intent intent = new Intent(HomeActivity.this,LoginActivity.class);
             startActivity(intent);
         }
-
 
         }
         @Override
@@ -99,6 +114,5 @@ void homePage(){
             Toast.makeText(HomeActivity.this,"Something went wrong",Toast.LENGTH_SHORT).show();
         }
     });
-
   }
 }

@@ -10,9 +10,10 @@ import retrofit2.http.POST;
 
 public interface ApiServices {
 
-@POST("Service/LoanOfficerLoginWithIDAndPassword")
-Call<LoanOfficerLoginWithIDAndPasswordResponse>LoginIdAndPassword(@Body LoanOfficerLoginWithIDAndPasswordRequest loanOfficerLoginWithIDAndPasswordRequest);
+ @POST("Service/LoanOfficerLoginWithIDAndPassword")
+ Call<LoanOfficerLoginWithIDAndPasswordResponse>LoginIdAndPassword(@Body LoanOfficerLoginWithIDAndPasswordRequest loanOfficerLoginWithIDAndPasswordRequest);
 
-@POST("Service/LoanOfficerHomeHomePageAndDashboard")
-Call<LoanOfficerHomeHomePageAndDashboardResponse>Dashboard(@Body LoanOfficerHomeHomePageAndDashboardRequest loanOfficerHomeHomePageAndDashboardRequest);
+ @POST("Service/LoanOfficerHomeHomePageAndDashboard")
+ Call<LoanOfficerHomeHomePageAndDashboardResponse>Dashboard(@Body LoanOfficerHomeHomePageAndDashboardRequest loanOfficerHomeHomePageAndDashboardRequest);
+
 }
