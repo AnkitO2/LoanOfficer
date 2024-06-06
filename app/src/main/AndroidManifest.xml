@@ -21,7 +21,7 @@
             android:name=".RepaymentList"
             android:exported="false" />
         <activity
-            android:name=".MemberList"
+            android:name=".MemberRegistrationList"
             android:exported="false" />
         <activity
             android:name=".MemberRequest"

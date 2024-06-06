@@ -3,7 +3,7 @@ package com.example.loanofficerapp.Response;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class LoanOfficerHomeHomePageAndDashboard {
+public class LoanOfficerHomePageAndDashboard {
     @SerializedName("AadharNo")
     @Expose
     private String aadharNo;
@@ -16,9 +16,6 @@ public class LoanOfficerHomeHomePageAndDashboard {
     @SerializedName("DepartmentName")
     @Expose
     private String departmentName;
-    @SerializedName("DesignationName")
-    @Expose
-    private String designationName;
     @SerializedName("EmailId")
     @Expose
     private String emailId;
@@ -31,9 +28,6 @@ public class LoanOfficerHomeHomePageAndDashboard {
     @SerializedName("EmployeeName")
     @Expose
     private String employeeName;
-    @SerializedName("EmployeeNo")
-    @Expose
-    private String employeeNo;
     @SerializedName("EmployeeType")
     @Expose
     private String employeeType;
@@ -94,14 +88,6 @@ public class LoanOfficerHomeHomePageAndDashboard {
         this.departmentName = departmentName;
     }
 
-    public String getDesignationName() {
-        return designationName;
-    }
-
-    public void setDesignationName(String designationName) {
-        this.designationName = designationName;
-    }
-
     public String getEmailId() {
         return emailId;
     }
@@ -132,14 +118,6 @@ public class LoanOfficerHomeHomePageAndDashboard {
 
     public void setEmployeeName(String employeeName) {
         this.employeeName = employeeName;
-    }
-
-    public String getEmployeeNo() {
-        return employeeNo;
-    }
-
-    public void setEmployeeNo(String employeeNo) {
-        this.employeeNo = employeeNo;
     }
 
     public String getEmployeeType() {
@@ -213,4 +191,5 @@ public class LoanOfficerHomeHomePageAndDashboard {
     public void setReligion(String religion) {
         this.religion = religion;
     }
+
 }

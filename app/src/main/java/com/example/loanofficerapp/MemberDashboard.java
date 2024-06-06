@@ -25,7 +25,7 @@ SharedPreferences sharedPreferences;
 
         sharedPreferences =getSharedPreferences("MyPREFERENCES", Context.MODE_PRIVATE);
 
-        binding.memberId.setText(sharedPreferences.getString("loanOfficerid",""));
+        binding.memberId.setText(sharedPreferences.getString("employeeId",""));
         binding.tokenId.setText(sharedPreferences.getString("token",""));
 
         binding.menuIcon.setOnClickListener(v -> {
@@ -38,27 +38,27 @@ SharedPreferences sharedPreferences;
                 int itemId = menuItem.getItemId();
                 if (itemId == R.id.Loan1) {
                     Intent intent = new Intent(MemberDashboard.this,HomeActivity.class);
-                    intent.putExtra("loanOfficerid",""+sharedPreferences.getString("loanOfficerid",""));
+                    intent.putExtra("employeeId",""+sharedPreferences.getString("employeeId",""));
                     intent.putExtra("token",""+sharedPreferences.getString("token",""));
                     startActivity(intent);
                 } else if (itemId == R.id.Loan2) {
                     Intent intent = new Intent(MemberDashboard.this,MemberRequest.class);
-                    intent.putExtra("loanOfficerid",""+sharedPreferences.getString("loanOfficerid",""));
+                    intent.putExtra("employeeId",""+sharedPreferences.getString("employeeId",""));
                     intent.putExtra("token",""+sharedPreferences.getString("token",""));
                     startActivity(intent);
                 } else if (itemId == R.id.Loan3) {
-                    Intent intent = new Intent(MemberDashboard.this,MemberList.class);
-                    intent.putExtra("loanOfficerid",""+sharedPreferences.getString("loanOfficerid",""));
+                    Intent intent = new Intent(MemberDashboard.this, MemberRegistrationList.class);
+                    intent.putExtra("employeeId",""+sharedPreferences.getString("employeeId",""));
                     intent.putExtra("token",""+sharedPreferences.getString("token",""));
                     startActivity(intent);
                 } else if (itemId == R.id.Loan4) {
                     Intent intent = new Intent(MemberDashboard.this,RepaymentList.class);
-                    intent.putExtra("loanOfficerid",""+sharedPreferences.getString("loanOfficerid",""));
+                    intent.putExtra("employeeId",""+sharedPreferences.getString("employeeId",""));
                     intent.putExtra("token",""+sharedPreferences.getString("token",""));
                     startActivity(intent);
                 } else if (itemId == R.id.Loan5) {
                     Intent intent = new Intent(MemberDashboard.this,LoginActivity.class);
-                    intent.putExtra("loanOfficerid",""+sharedPreferences.getString("loanOfficerid",""));
+                    intent.putExtra("employeeId",""+sharedPreferences.getString("employeeId",""));
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("loginStatus", "");
                     editor.apply();

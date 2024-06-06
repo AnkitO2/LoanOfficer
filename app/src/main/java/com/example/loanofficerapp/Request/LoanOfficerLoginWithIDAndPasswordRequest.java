@@ -4,19 +4,19 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class LoanOfficerLoginWithIDAndPasswordRequest {
-    @SerializedName("LoanOfficerid")
+    @SerializedName("EmployeeId")
     @Expose
-    private String loanOfficerid;
+    private String employeeId;
     @SerializedName("Password")
     @Expose
     private String password;
 
-    public String getLoanOfficerid() {
-        return loanOfficerid;
+    public String getEmployeeId() {
+        return employeeId;
     }
 
-    public void setLoanOfficerid(String loanOfficerid) {
-        this.loanOfficerid = loanOfficerid;
+    public void setEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
     }
 
     public String getPassword() {

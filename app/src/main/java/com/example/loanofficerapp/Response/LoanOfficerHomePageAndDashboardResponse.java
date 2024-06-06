@@ -3,10 +3,10 @@ package com.example.loanofficerapp.Response;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class LoanOfficerHomeHomePageAndDashboardResponse {
-    @SerializedName("LoanOfficerHomeHomePageAndDashboard")
+public class LoanOfficerHomePageAndDashboardResponse {
+    @SerializedName("LoanOfficerHomePageAndDashboard")
     @Expose
-    private LoanOfficerHomeHomePageAndDashboard loanOfficerHomeHomePageAndDashboard;
+    private LoanOfficerHomePageAndDashboard loanOfficerHomePageAndDashboard;
     @SerializedName("Message")
     @Expose
     private String message;
@@ -14,12 +14,12 @@ public class LoanOfficerHomeHomePageAndDashboardResponse {
     @Expose
     private Boolean status;
 
-    public LoanOfficerHomeHomePageAndDashboard getLoanOfficerHomeHomePageAndDashboard() {
-        return loanOfficerHomeHomePageAndDashboard;
+    public LoanOfficerHomePageAndDashboard getLoanOfficerHomePageAndDashboard() {
+        return loanOfficerHomePageAndDashboard;
     }
 
-    public void setLoanOfficerHomeHomePageAndDashboard(LoanOfficerHomeHomePageAndDashboard loanOfficerHomeHomePageAndDashboard) {
-        this.loanOfficerHomeHomePageAndDashboard = loanOfficerHomeHomePageAndDashboard;
+    public void setLoanOfficerHomePageAndDashboard(LoanOfficerHomePageAndDashboard loanOfficerHomePageAndDashboard) {
+        this.loanOfficerHomePageAndDashboard = loanOfficerHomePageAndDashboard;
     }
 
     public String getMessage() {

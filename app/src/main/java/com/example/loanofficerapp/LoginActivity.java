@@ -21,7 +21,7 @@ import retrofit2.Response;
 public class LoginActivity extends AppCompatActivity {
     ActivityLoginBinding binding;
     SharedPreferences sharedPreferences;
-    String loanOfficerid ="", password ="" , token="";
+    String employeeId ="", password ="" , token="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,26 +43,26 @@ public class LoginActivity extends AppCompatActivity {
     }
 void userLogin(){
     LoanOfficerLoginWithIDAndPasswordRequest request = new LoanOfficerLoginWithIDAndPasswordRequest();
-    request.setLoanOfficerid(binding.usernameInputEditText.getText().toString());
+    request.setEmployeeId(binding.usernameInputEditText.getText().toString());
     request.setPassword(binding.passwordInputEditText.getText().toString());
     RetrofitClient.getClient().LoginIdAndPassword(request).enqueue(new Callback<LoanOfficerLoginWithIDAndPasswordResponse>() {
         @Override
         public void onResponse(Call<LoanOfficerLoginWithIDAndPasswordResponse> call, Response<LoanOfficerLoginWithIDAndPasswordResponse> response) {
-        if (response.body().getLoginMessage().equalsIgnoreCase("LoanOfficer Login Successfull")){
+        if (response.body().getLoginMessage().equalsIgnoreCase("Employee Login Successfull")){
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putString("loginStatus", response.body().getLoginMessage());
             editor.apply();
             Toast.makeText(LoginActivity.this,""+response.body().getLoginMessage(),Toast.LENGTH_SHORT).show();
 
-            SharedPreferences.Editor  loanOfficerid= sharedPreferences.edit(); // Corrected variable name
-            loanOfficerid.putString("loanOfficerid", response.body().getLoanOfficerLoginWithIDAndPassword().getLoanOfficerid());
-            loanOfficerid.apply();
+            SharedPreferences.Editor  employeeId= sharedPreferences.edit(); // Corrected variable name
+            employeeId.putString("employeeId", response.body().getLoanOfficerLoginWithIDAndPassword().getemployeeId());
+            employeeId.apply();
 
             SharedPreferences.Editor token = sharedPreferences.edit();
             token.putString("token", response.body().getLoanOfficerLoginWithIDAndPassword().getTokenString());
             token.apply();
 
-            Toast.makeText(LoginActivity.this, ""+response.body().getLoanOfficerLoginWithIDAndPassword().getLoanOfficerid(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this, ""+response.body().getLoanOfficerLoginWithIDAndPassword().getemployeeId(), Toast.LENGTH_SHORT).show();
             Intent intent =  new Intent(LoginActivity.this,MemberDashboard.class);
             startActivity(intent);
         }

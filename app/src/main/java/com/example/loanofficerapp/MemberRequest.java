@@ -36,22 +36,22 @@ private RequestMemberBinding binding;
                 int itemId = menuItem.getItemId();
                 if (itemId == R.id.Loan1) {
                     Intent intent = new Intent(MemberRequest.this,HomeActivity.class);
-                    intent.putExtra("loanOfficerid",""+sharedPreferences.getString("loanOfficerid",""));
+                    intent.putExtra("employeeId",""+sharedPreferences.getString("employeeId",""));
                     intent.putExtra("token",""+sharedPreferences.getString("token",""));
                     startActivity(intent);
                 } else if (itemId == R.id.Loan2) {
                     Intent intent = new Intent(MemberRequest.this,MemberDashboard.class);
-                    intent.putExtra("loanOfficerid",""+sharedPreferences.getString("loanOfficerid",""));
+                    intent.putExtra("employeeId",""+sharedPreferences.getString("employeeId",""));
                     intent.putExtra("token",""+sharedPreferences.getString("token",""));
                     startActivity(intent);
                 } else if (itemId == R.id.Loan3) {
-                    Intent intent = new Intent(MemberRequest.this,MemberList.class);
-                    intent.putExtra("loanOfficerid",""+sharedPreferences.getString("loanOfficerid",""));
+                    Intent intent = new Intent(MemberRequest.this, MemberRegistrationList.class);
+                    intent.putExtra("employeeId",""+sharedPreferences.getString("employeeId",""));
                     intent.putExtra("token",""+sharedPreferences.getString("token",""));
                     startActivity(intent);
                 } else if (itemId == R.id.Loan4) {
                     Intent intent = new Intent(MemberRequest.this,RepaymentList.class);
-                    intent.putExtra("loanOfficerid",""+sharedPreferences.getString("loanOfficerid",""));
+                    intent.putExtra("employeeId",""+sharedPreferences.getString("employeeId",""));
                     intent.putExtra("token",""+sharedPreferences.getString("token",""));
                     startActivity(intent);
                 } else if (itemId == R.id.Loan5) {
