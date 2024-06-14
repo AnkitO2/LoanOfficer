@@ -43,7 +43,7 @@ private ListRepaymentBinding binding;
                     intent.putExtra("token",""+sharedPreferences.getString("token",""));
                     startActivity(intent);
                 } else if (itemId == R.id.Loan3) {
-                    Intent intent = new Intent(RepaymentList.this, MemberRegistrationList.class);
+                    Intent intent = new Intent(RepaymentList.this, MemberList.class);
                     intent.putExtra("employeeId",""+sharedPreferences.getString("employeeId",""));
                     intent.putExtra("token",""+sharedPreferences.getString("token",""));
                     startActivity(intent);

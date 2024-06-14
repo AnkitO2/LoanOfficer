@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawerLayout1"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
@@ -176,33 +177,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="32dp"
-            android:layout_marginTop="8dp"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:weightSum="2">
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="Designation Name"
-                android:textColor="@color/black"
-                android:textSize="13sp"/>
-            <TextView
-                android:id="@+id/home5"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:gravity="left"
-                android:layout_weight="1"
-                android:text="Welcome"
-                android:textColor="#D81414"
-                android:textSize="13sp" />
-
-        </LinearLayout>
+      
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -220,7 +195,7 @@
                 android:textColor="@color/black"
                 android:textSize="13sp"/>
             <TextView
-                android:id="@+id/home6"
+                android:id="@+id/home5"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:gravity="left"
@@ -245,7 +220,7 @@
                 android:textColor="@color/black"
                 android:textSize="13sp"/>
             <TextView
-                android:id="@+id/home7"
+                android:id="@+id/home6"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:gravity="left"
@@ -270,7 +245,7 @@
                 android:textColor="@color/black"
                 android:textSize="13sp"/>
             <TextView
-                android:id="@+id/home8"
+                android:id="@+id/home7"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:gravity="left"
@@ -295,7 +270,7 @@
                 android:textColor="@color/black"
                 android:textSize="13sp"/>
             <TextView
-                android:id="@+id/home9"
+                android:id="@+id/home8"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:gravity="left"
@@ -320,7 +295,7 @@
                 android:textColor="@color/black"
                 android:textSize="13sp"/>
             <TextView
-                android:id="@+id/home10"
+                android:id="@+id/home9"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:gravity="left"
@@ -345,7 +320,7 @@
                 android:textColor="@color/black"
                 android:textSize="13sp"/>
             <TextView
-                android:id="@+id/home11"
+                android:id="@+id/home10"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:gravity="left"
@@ -370,7 +345,7 @@
                 android:textColor="@color/black"
                 android:textSize="13sp"/>
             <TextView
-                android:id="@+id/home12"
+                android:id="@+id/home11"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:gravity="left"
@@ -395,7 +370,7 @@
                 android:textColor="@color/black"
                 android:textSize="13sp"/>
             <TextView
-                android:id="@+id/home13"
+                android:id="@+id/home12"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:gravity="left"
@@ -420,7 +395,7 @@
                 android:textColor="@color/black"
                 android:textSize="13sp"/>
             <TextView
-                android:id="@+id/home14"
+                android:id="@+id/home13"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:gravity="left"
@@ -445,7 +420,7 @@
                 android:textColor="@color/black"
                 android:textSize="13sp"/>
             <TextView
-                android:id="@+id/home15"
+                android:id="@+id/home14"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:gravity="left"
@@ -470,7 +445,7 @@
                 android:textColor="@color/black"
                 android:textSize="13sp"/>
             <TextView
-                android:id="@+id/home16"
+                android:id="@+id/home15"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:gravity="left"
@@ -495,7 +470,7 @@
                 android:textColor="@color/black"
                 android:textSize="13sp"/>
             <TextView
-                android:id="@+id/home17"
+                android:id="@+id/home16"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:gravity="left"
@@ -520,7 +495,7 @@
                 android:textColor="@color/black"
                 android:textSize="13sp"/>
             <TextView
-                android:id="@+id/home18"
+                android:id="@+id/home17"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:gravity="left"
@@ -545,7 +520,7 @@
                 android:textColor="@color/black"
                 android:textSize="13sp"/>
             <TextView
-                android:id="@+id/home19"
+                android:id="@+id/home18"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:gravity="left"

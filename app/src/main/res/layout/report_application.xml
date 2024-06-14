@@ -5,19 +5,20 @@
     android:id="@+id/drawerLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MemberRequest">
-
+    tools:context=".ApplicationReport">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@color/white">
+
         <LinearLayout
             android:id="@+id/appBar1"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="#444145"
-            android:padding="10dp">
+            android:padding="10dp"
+            >
             <ImageView
                 android:id="@+id/menuIcon"
                 android:layout_width="30dp"
@@ -36,26 +37,8 @@
                 android:textSize="20dp"
                 />
         </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="30dp"
-        android:layout_gravity="center"
-        android:orientation="vertical"
-        android:weightSum="2">
 
-        <TextView
-            android:id="@+id/tokenId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:text="Coming Soon Member Request"
-            android:textColor="#E11111"
-            />
-      </LinearLayout>
+
     </LinearLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView1"
@@ -65,4 +48,5 @@
         app:headerLayout="@layout/header"
         app:menu="@menu/main_menu">
     </com.google.android.material.navigation.NavigationView>
+
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -15,16 +17,22 @@
         android:theme="@style/Theme.LoanOfficerApp"
         tools:targetApi="31">
         <activity
+            android:name=".ApplicationReportAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".ApplicationReport"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".RepaymentList"
             android:exported="false" />
         <activity
-            android:name=".MemberRegistrationList"
+            android:name=".MemberList"
             android:exported="false" />
         <activity
-            android:name=".MemberRequest"
+            android:name=".MemberRegistration"
             android:exported="false" />
         <activity
             android:name=".MemberDashboard"
